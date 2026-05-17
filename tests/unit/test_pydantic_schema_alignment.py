@@ -76,6 +76,8 @@ KNOWN_SCHEMA_LIBRARY_MISMATCHES: dict[str, set[str]] = {
     "/schemas/latest/media-buy/get-media-buy-delivery-request.json": {
         "account",  # Schema says 'account' (object), library uses 'account_id' (string)
         "reporting_dimensions",  # Schema defines it, library doesn't have it yet
+        "time_granularity",  # Schema defines per-window slice granularity, library doesn't have it yet
+        "include_window_breakdown",  # Schema defines windowed pull breakdown, library doesn't have it yet
     },
     "/schemas/latest/media-buy/sync-creatives-request.json": {
         # adcp 4.3 schema uses 'account_id' (string); library + our model still use 'account' (AccountReference)
